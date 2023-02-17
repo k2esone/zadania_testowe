@@ -18,6 +18,8 @@ public class MainB {
         int quantity = Integer.parseInt(quantityString);
 
         List<String> listOfNames = new ArrayList<>();
+        List<String> list = new ArrayList<>();
+
 
         for (int i = 0; i < quantity; i++) {
             System.out.println("Podaj imię do weryfikacji");
@@ -29,13 +31,10 @@ public class MainB {
 
         for (int i = 0; i < listOfNames.size(); i++) {
             if (IMIONA_DOZWOLONE.contains(listOfNames.get(i))) {
-                System.out.println(listOfNames.get(i));
-                System.out.println("Znaleziono dopasowanie");
-            } else {
-                System.out.println(listOfNames.get(i));
-                System.out.println("Brak dopasowania");
+            list.add(listOfNames.get(i));
             }
 
         }
+        System.out.println("Znaleziono dopasowanie dla " + list);
     }
 }
